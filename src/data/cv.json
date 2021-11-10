@@ -1,0 +1,104 @@
+{
+    "meta":{
+        "title": "Pham Truong Hoai Thanh",
+        "description": "Pham Truong Hoai Thanh Curriculum Vitae"
+    },
+    "info":{
+        "name":"Pham Truong Hoai Thanh",
+        "location": "Ho Chi Minh, VN",
+        "mobile": "+84961050546",
+        "email": "phamtruonghoaithanh.ptbt@gmail.com",
+        "facebook": "https://www.facebook.com/HoaiThanhit/",
+        "github": "https://github.com/phamtruonghoaithanh0210"
+    },
+    "summary":[
+        "I am a 4th year student of an Open university",
+        "I have knowledge of JavaScript, ReactJS, Django Rest Api",
+        "I have experience using github and workgroup"
+    ],
+    "history":[
+        {
+            "time" : "OCT 2020 - DEC 2020",
+            "skills" : "Flask Framework, Mysql, HTML/CSS",
+            "projects": [
+                {
+                    "name":"Mini Project 'Softwave Technology'",
+                    "description": "The topic is Book Management website. About user interface and admin interface",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/CongNghePhanMem",
+                    "responsibilities":[
+                        "I was the core deverloper of backend.",
+                        "My team has two menbers, We work according to the Scrum model."
+                    ]
+                }
+            ]
+        },
+        {
+            "time" : "",
+            "skills" : "",
+            "projects": [
+                {
+                    "name":"",
+                    "description": "",
+                    "git" : ""
+                }
+            ]
+        },
+        {
+            "time" : "",
+            "skills" : "",
+            "projects": [
+                {
+                    "name":"",
+                    "description": "",
+                    "git" : ""
+                }
+            ]
+        },
+                {
+            "time" : "",
+            "skills" : "",
+            "projects": [
+                {
+                    "name":"",
+                    "description": "",
+                    "git" : ""
+                }
+            ]
+        }
+    ],
+    "education":[
+        {
+            "school": "Open University HCM",
+            "major": "Software Engineering",
+            "time": "",
+            "achievements":[
+                "I had three scholarship 'Encourage Learning' ",
+                "I completed 4 semesters grade Good."
+            ]
+        }
+    ],
+    "activities":[
+        {
+            "name":"Blood Donation",
+            "role": "Volunteers",
+            "description": "",
+            "time": ""
+        },
+        {
+            "name":"Blood Donation",
+            "role": "Volunteers",
+            "description": "",
+            "time": ""
+        },
+        {
+            "name":"Blood Donation",
+            "role": "Volunteers",
+            "description": "",
+            "time": ""
+        }
+    ],
+    "hobbies":[
+        "swimming",
+        "Reading books"
+    ]
+}
