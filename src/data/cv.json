@@ -19,10 +19,10 @@
     "history":[
         {
             "time" : "OCT 2020 - DEC 2020",
-            "skills" : "Flask Framework, Mysql, HTML/CSS",
+            "skills" : "Flask Framework, MySql, HTML5/CSS3",
             "projects": [
                 {
-                    "name":"Mini Project 'Softwave Technology'",
+                    "name":"Mini project 'Softwave Technology'",
                     "description": "The topic is Book Management website. About user interface and admin interface",
                     "git" : "https://github.com/phamtruonghoaithanh0210/CongNghePhanMem",
                     "responsibilities":[
@@ -33,24 +33,35 @@
             ]
         },
         {
-            "time" : "",
-            "skills" : "",
+            "time" : "MAR 2021 - MAY 2021",
+            "skills" : "JavaFX, MySql, jUnit" ,
             "projects": [
                 {
-                    "name":"",
-                    "description": "",
-                    "git" : ""
+                    "name":"Mini project 'Software Testing'",
+                    "description": "The topic is Manage mobile phone sales",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/KiemThuProject",
+                    "responsibilities":[
+                        "I did the receipt function and receipt details function and wrote unit tests for the function.",
+                        "My team has four menbers"
+                    ]
                 }
             ]
         },
         {
-            "time" : "",
-            "skills" : "",
+            "time" : "AUG 2021 - Now",
+            "skills" : "Javascript, MySql, Django, ReactJS, Redux, Oauth2, Facebook Graph API, Heroku, Sendgird API, Mailchimp API, Stripe, HTML5/CSS3, ChartJS ",
             "projects": [
                 {
-                    "name":"",
+                    "name":"Major project backend",
                     "description": "",
-                    "git" : ""
+                    "responsibilities": [],
+                    "git" : "https://github.com/phamtruonghoaithanh0210/QL-DatVeXeKhach"
+                },
+                {
+                    "name":"Major project frontend",
+                    "description": "",
+                    "responsibilities": [],
+                    "git" : "https://github.com/phamtruonghoaithanh0210/ticket-management"
                 }
             ]
         },
