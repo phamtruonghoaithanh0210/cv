@@ -3,6 +3,7 @@ import {Grid, Paper, Container, Box } from "@mui/material"
 import { styled } from '@mui/styles';
 import  Avatar from "./Avatar"
 import Info from './Info'
+import Experience from './Experience';
 
 export default function Body() {
     return (
@@ -17,6 +18,7 @@ export default function Body() {
             <Grid item xs={6} md={8}>
                 <Box mt={2}>
                     <Info />
+                    <Experience/>
                 </Box>
             </Grid>
         </Grid>
