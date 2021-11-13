@@ -5,6 +5,9 @@
     },
     "info":{
         "name":"Pham Truong Hoai Thanh",
+        "dayOfBirth" : "02 October 2000",
+        "mainLanguage": "Vietnamese",
+        "secondLanguage": "English",
         "location": "Ho Chi Minh, VN",
         "mobile": "+84961050546",
         "email": "phamtruonghoaithanh.ptbt@gmail.com",
@@ -14,7 +17,8 @@
     "summary":[
         "I am a 4th year student of an Open university",
         "I have knowledge of JavaScript, ReactJS, Django Rest Api",
-        "I have experience using github and workgroup"
+        "I have experience using github and workgroup When I was a student, I make some mini projects of the subject. I always complete tasks ahead of time.",
+        "I look forward to working in the company's new environment to improve my knowledge and gain more experience"  
     ],
     "history":[
         {
