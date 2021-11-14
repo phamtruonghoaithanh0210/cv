@@ -18,21 +18,24 @@
         "I am a 4th year student of an Open university",
         "I have knowledge of JavaScript, ReactJS, Django Rest Api",
         "I have experience using github and workgroup When I was a student, I make some mini projects of the subject. I always complete tasks ahead of time.",
-        "I look forward to working in the company's new environment to improve my knowledge and gain more experience"  
+        "I look forward to working in the company's new environment to improve my knowledge, skills, gain more experience and help the company grow."  
     ],
     "history":[
         {
             "time" : "OCT 2020 - DEC 2020",
-            "skills" : "Flask Framework, MySql, HTML5/CSS3",
+            "skills" : "Flask Framework, MySql, HTML5/CSS3.",
             "projects": [
                 {
                     "name":"Mini project 'Softwave Technology'",
-                    "description": "The topic is Book Management website. About user interface and admin interface",
+                    "description": "The topic is Book Management website. About user interface and admin interface.",
                     "git" : "https://github.com/phamtruonghoaithanh0210/CongNghePhanMem",
                     "responsibilities":[
                         "I was the core deverloper of backend.",
-                        "My team has two menbers, We work according to the Scrum model."
-                    ]
+                        "My team has two menbers, We work according to the Scrum model.",
+                        "First time I tried 'Code-First'."
+                    ],
+                    "link":""
+                    
                 }
             ]
         },
@@ -47,36 +50,58 @@
                     "responsibilities":[
                         "I did the receipt function and receipt details function and wrote unit tests for the function.",
                         "My team has four menbers"
-                    ]
+                    ],
+                    "link":""
                 }
             ]
         },
         {
             "time" : "AUG 2021 - Now",
-            "skills" : "Javascript, MySql, Django, ReactJS, Redux, Oauth2, Facebook Graph API, Heroku, Sendgird API, Mailchimp API, Stripe, HTML5/CSS3, ChartJS ",
+            "skills" : " Django, MySql, Oauth2, Facebook Graph API, Heroku, Sendgird API, Mailchimp API, Stripe, HTML5/CSS3, ChartJS.",
             "projects": [
                 {
                     "name":"Major project backend",
-                    "description": "",
-                    "responsibilities": [],
-                    "git" : "https://github.com/phamtruonghoaithanh0210/QL-DatVeXeKhach"
-                },
-                {
-                    "name":"Major project frontend",
-                    "description": "",
-                    "responsibilities": [],
-                    "git" : "https://github.com/phamtruonghoaithanh0210/ticket-management"
+                    "description": "The topic is Bus Ticketing System",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/QL-DatVeXeKhach",
+                    "responsibilities": [
+                        "My team has two menbers. In backend, I created model of database, created some API. Thu user is Authenticated with Oauth2.",
+                        "I used wit.ai and Facebook Graph API to created a bot chat for web with handle NLP.",
+                        "With payment online im used Stripe API. I used Mailchimp API for mail marketing and sengird API for mailing.",
+                        "First time I tried deploy a projects on Heroku"  
+                    ],
+                    "link" : ""
+                    
                 }
             ]
         },
-                {
-            "time" : "",
-            "skills" : "",
+        {
+            "time" : "AUG 2021 - Now",
+            "skills" : "Javascript, ReactJS, Redux, Heroku, HTML5/CSS3, React-Bootstrap ",
             "projects": [
                 {
-                    "name":"",
-                    "description": "",
-                    "git" : ""
+                    "name":"Major project frontend",
+                    "description": "The topic is Bus Ticketing System",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/ticket-management",
+                    "responsibilities": [
+                        "I am responceibility for the user's function: Login, register, Infomation of user, Bills of user, Comments..."
+                    ],
+                    "link":""
+                    
+                }
+            ]
+        },
+        {
+            "time" : "NOV 2021 - Now",
+            "skills" : "Reactjs, Material-UI, HTML5/CSS3, Javascript.",
+            "projects": [
+                {
+                    "name":"Mini Project Curriculum Vitae",
+                    "description": "The topic is Curriculum Vitae ",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/cv",
+                    "responsibilities": [
+                        "I tried using Material to make UI."
+                    ],
+                    "link":""
                 }
             ]
         }
@@ -85,7 +110,7 @@
         {
             "school": "Open University HCM",
             "major": "Software Engineering",
-            "time": "",
+            "time": " OCT 2018 - Now",
             "achievements":[
                 "I had three scholarship 'Encourage Learning' ",
                 "I completed 4 semesters grade Good."
@@ -96,20 +121,20 @@
         {
             "name":"Blood Donation",
             "role": "Volunteers",
-            "description": "",
-            "time": ""
+            "description": "voluntary blood donation",
+            "time": "DEC 2018"
         },
         {
             "name":"Blood Donation",
             "role": "Volunteers",
-            "description": "",
-            "time": ""
+            "description": "voluntary blood donation",
+            "time": "OCT 2019"
         },
         {
-            "name":"Blood Donation",
+            "name":"Welcome New Students IT K20",
             "role": "Volunteers",
-            "description": "",
-            "time": ""
+            "description": "Support game operation",
+            "time": "NOV 2020"
         }
     ],
     "hobbies":[
