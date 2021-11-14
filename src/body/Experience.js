@@ -1,16 +1,71 @@
 import React from 'react'
 import {Box, Typography, } from '@mui/material'
-import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator, } from "@mui/lab"
-import dataCV from "../data/cv.json" 
+import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineSeparator } from "@mui/lab"
+import dataCV from "../data/cv.json"
+import {makeStyles, withStyles} from "@mui/styles" 
+
+const TimelineItem = withStyles({
+    missingOppositeContent: {
+    "&:before": {
+        display: "none"
+    }
+    }
+})(MuiTimelineItem);
 
 function Experience() {
     const data= dataCV["history"]
-    console.info(data)
+    const classes = useStyles();
+    const History = data.map((t)=>{
+        const ListResponsibilities = t["projects"][0]["responsibilities"].map((idx) =>{
+            return(
+                <Typography variant="body2" color="inherit" component="div">
+                    {idx}
+                </Typography>
+            )
+        })
+        return(
+            <Timeline position="right" className={classes.typo}>
+                <TimelineItem  >
+                    <TimelineSeparator>
+                        <TimelineDot variant="outlined" color="primary"/>
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent >
+                        <Typography variant="h6" color="inherit" component="div">
+                            {t.time}
+                        </Typography>
+                        <Typography variant="body1" color="inherit" component="div">
+                            {t["projects"][0].name}
+                        </Typography>
+                        <Typography variant="body2" color="inherit" component="div">
+                            Skills:
+                        </Typography>
+                        <Typography variant="body2" color="inherit" component="div">
+                            {t.skills}
+                        </Typography>
+                        <Typography variant="body2" color="inherit" component="div">
+                            {t["projects"][0].description}
+                        </Typography>
+                        <Typography variant="body2" color="inherit" component="div">
+                            Responsibilities:
+                        </Typography>
+                        {ListResponsibilities}
+                        <Typography variant="body2" color="inherit" component="span">
+                            Git:
+                        </Typography>
+                        <Typography variant="body2" color="inherit" component="span" >
+                            <a href={t["projects"][0].git} className={classes.link}> {t["projects"][0].git}</a>
+                        </Typography>
+                    </TimelineContent>
+                </TimelineItem>
+            </Timeline>            
+        )
+    })
     return (
         <Box
             sx={{
             width: 766,
-            height: 430,
+            height: 1260,
             padding: 2,
             borderRight: '1px solid grey',
             '&:hover': {
@@ -22,24 +77,25 @@ function Experience() {
             <Typography variant="h6" color="inherit" component="div">
                 Experience
             </Typography>
-            <Timeline  >
-                <TimelineItem>
-                    <TimelineSeparator>
-                        <TimelineDot variant="outlined" color="primary"/>
-                        <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                        <Typography variant="body2" color="inherit" component="div">
-                            OCT 2020 - DEC 2020
-                        </Typography>
-                        <Typography variant="body2" color="inherit" component="span">
-                            Mini project 'Softwave Technology
-                        </Typography>    
-                    </TimelineContent>
-                </TimelineItem>
-            </Timeline>
+            {History}
+            
         </Box>
     )
 }
+const useStyles = makeStyles(theme => ({
+    typo:{
+        width: "700px",
+    },
+    link:{
+        textDecoration: "none",
+        color: "black",
+        "&:hover": {
+            color: "#f25f4c",
+            borderBottom: "1px solid white",
+        },
+    }
+
+
+}))
 
 export default Experience
