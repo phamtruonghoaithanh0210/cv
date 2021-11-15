@@ -4,6 +4,8 @@ import { styled } from '@mui/styles';
 import  Avatar from "./Avatar"
 import Info from './Info'
 import Experience from './Experience';
+import Education from './Education';
+import Activities from './Activities';
 
 export default function Body() {
     return (
@@ -19,6 +21,8 @@ export default function Body() {
                 <Box mt={2}>
                     <Info />
                     <Experience/>
+                    <Education/>
+                    <Activities/>
                 </Box>
             </Grid>
         </Grid>
