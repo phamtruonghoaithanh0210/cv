@@ -9,10 +9,13 @@ import LanguageIcon from '@mui/icons-material/Language';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PoolIcon from '@mui/icons-material/Pool';
+import BookIcon from '@mui/icons-material/Book';
 import { red } from '@mui/material/colors';
 import {makeStyles} from "@mui/styles"
 
 export default function Info() {
+    const hobies = dataCV["hobbies"]
     const data= dataCV["summary"]
     const listSummary = data.map((idx)=><li>{idx}</li>)
     const email = dataCV["info"]["email"] 
@@ -30,7 +33,7 @@ export default function Info() {
         <Box
             sx={{
             width: 766,
-            height: 430,
+            height: 530,
             padding: 2,
             borderRight: '1px solid grey',
             borderTop: '1px solid grey',
@@ -69,6 +72,15 @@ export default function Info() {
                     </Stack>    
                 </Grid>
             </Grid>
+            <hr/>
+            <Typography variant="h6" color="inherit" component="div">
+                Hobbies
+            </Typography>
+                <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
+                    <div className={classes.div}><PoolIcon color="primary"/>{hobies[0]}</div>
+                    <div className={classes.div}><BookIcon color="primary"/>{hobies[1]}</div>
+                </Stack>
+            <hr/>
         </Box>
     )
 }
