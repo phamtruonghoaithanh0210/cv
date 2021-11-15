@@ -65,7 +65,7 @@ function Experience() {
         <Box
             sx={{
             width: 766,
-            height: 1260,
+            height: 1380,
             padding: 2,
             borderRight: '1px solid grey',
             '&:hover': {
@@ -78,7 +78,7 @@ function Experience() {
                 Experience
             </Typography>
             {History}
-            
+            <hr/>
         </Box>
     )
 }
