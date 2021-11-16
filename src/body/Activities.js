@@ -17,11 +17,11 @@ function Activities() {
         <Box
         sx={{
         width: 766,
-        height: 280,
+        height: 600,
         padding: 2,
         borderRight: '1px solid grey',
         '&:hover': {
-            backgroundColor: '#bae8e8',
+            backgroundColor: '#abd1c6',
             opacity: [0.9, 0.8, 0.7],
         },
         }}
@@ -46,22 +46,22 @@ const Activity = data.map((a)=> {
                     <Typography variant="h6" color="inherit" component="div">
                         {a.time}
                     </Typography>
-                    <Typography variant="h6" color="inherit" component="div">
+                    <Typography variant="body2" color="inherit" component="div">
                         Name:
                     </Typography>
-                    <Typography variant="h6" color="inherit" component="div">
+                    <Typography variant="body2" color="inherit" component="div">
                         {a.name}
                     </Typography>
-                    <Typography variant="h6" color="inherit" component="div">
+                    <Typography variant="body2" color="inherit" component="div">
                         Role:
                     </Typography>
-                    <Typography variant="h6" color="inherit" component="div">
+                    <Typography variant="body2" color="inherit" component="div">
                         {a.role}
                     </Typography>
-                    <Typography variant="h6" color="inherit" component="div">
+                    <Typography variant="body2" color="inherit" component="div">
                         Description:
                     </Typography>
-                    <Typography variant="h6" color="inherit" component="div">
+                    <Typography variant="body2" color="inherit" component="div">
                         {a.description}
                     </Typography>
                 </TimelineContent>

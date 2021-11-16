@@ -20,8 +20,8 @@ export default function Body() {
             <Grid item xs={6} md={8}>
                 <Box mt={2}>
                     <Info />
-                    <Experience/>
                     <Education/>
+                    <Experience/>
                     <Activities/>
                 </Box>
             </Grid>

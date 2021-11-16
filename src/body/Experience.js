@@ -2,6 +2,7 @@ import React from 'react'
 import {Box, Typography, } from '@mui/material'
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineSeparator } from "@mui/lab"
 import dataCV from "../data/cv.json"
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import {makeStyles, withStyles} from "@mui/styles" 
 
 const TimelineItem = withStyles({
@@ -12,13 +13,14 @@ const TimelineItem = withStyles({
     }
 })(MuiTimelineItem);
 
+
 function Experience() {
     const data= dataCV["history"]
     const classes = useStyles();
     const History = data.map((t)=>{
         const ListResponsibilities = t["projects"][0]["responsibilities"].map((idx) =>{
             return(
-                <Typography variant="body2" color="inherit" component="div">
+                <Typography variant="body2" color="inherit" component="div" paddingLeft="15px">
                     {idx}
                 </Typography>
             )
@@ -27,30 +29,35 @@ function Experience() {
             <Timeline position="right" className={classes.typo}>
                 <TimelineItem  >
                     <TimelineSeparator>
-                        <TimelineDot variant="outlined" color="primary"/>
+                        <TimelineDot>
+                            <LaptopMacIcon color="primary" />
+                        </TimelineDot>
                         <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent >
-                        <Typography variant="h6" color="inherit" component="div">
+                        <Typography variant="h6" style={{color:"#0B8790"}} component="div">
                             {t.time}
                         </Typography>
-                        <Typography variant="body1" color="inherit" component="div">
+                        <Typography variant="h6" style={{color:"#190033"}} component="div">
                             {t["projects"][0].name}
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="div">
+                        <Typography variant="body2" style={{color:"#d9376e"}} component="div">
                             Skills:
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="div">
+                        <Typography variant="body2" color="inherit" component="div" paddingLeft="15px">
                             {t.skills}
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="div">
+                        <Typography variant="body2" style={{color:"#d9376e"}} component="div">
+                            Topic:
+                        </Typography>
+                        <Typography variant="body2" color="inherit" component="div" paddingLeft="15px">
                             {t["projects"][0].description}
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="div">
+                        <Typography variant="body2" style={{color:"#d9376e"}} component="div">
                             Responsibilities:
                         </Typography>
                         {ListResponsibilities}
-                        <Typography variant="body2" color="inherit" component="span">
+                        <Typography variant="body2" color="inherit" component="span" style={{color:"#d9376e"}}>
                             Git:
                         </Typography>
                         <Typography variant="body2" color="inherit" component="span" >
@@ -65,7 +72,7 @@ function Experience() {
         <Box
             sx={{
             width: 766,
-            height: 1380,
+            height: 1500,
             padding: 2,
             borderRight: '1px solid grey',
             '&:hover': {
@@ -90,7 +97,7 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "none",
         color: "black",
         "&:hover": {
-            color: "#f25f4c",
+            color: "#f9bc60",
             borderBottom: "1px solid white",
         },
     }
