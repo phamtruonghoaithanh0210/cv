@@ -15,8 +15,8 @@
         "github": "https://github.com/phamtruonghoaithanh0210"
     },
     "summary":[
-        "I am a 4th year student of an Open university",
-        "I have knowledge of JavaScript, ReactJS, Django Rest Api",
+        "I am a 4th year student of an Open university.",
+        "I have knowledge of JavaScript, ReactJS, Django Rest Api.",
         "I have experience using github and workgroup When I was a student, I make some mini projects of the subject. I always complete tasks ahead of time.",
         "I look forward to working in the company's new environment to improve my knowledge, skills, gain more experience and help the company grow."  
     ],
@@ -121,19 +121,19 @@
         {
             "name":"Blood Donation",
             "role": "Volunteers",
-            "description": "voluntary blood donation",
+            "description": "Voluntary blood donation.",
             "time": "DEC 2018"
         },
         {
             "name":"Blood Donation",
             "role": "Volunteers",
-            "description": "voluntary blood donation",
+            "description": "Voluntary blood donation.",
             "time": "OCT 2019"
         },
         {
             "name":"Welcome New Students IT K20",
             "role": "Volunteers",
-            "description": "Support game operation",
+            "description": "Support game operation.",
             "time": "NOV 2020"
         }
     ],
