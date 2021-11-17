@@ -33,7 +33,7 @@ export default function Info() {
         <Box
             sx={{
             width: 766,
-            height: 530,
+            height: 550,
             padding: 2,
             borderRight: '1px solid grey',
             borderTop: '1px solid grey',
@@ -46,7 +46,7 @@ export default function Info() {
             <Typography variant="h6" color="inherit" component="div">
                 Introduction
             </Typography>
-            <Typography variant="body2" color="inherit" component="div">
+            <Typography variant="body1" color="inherit" component="div">
                 <ul>{listSummary}</ul>
             </Typography>
             <hr/>
@@ -55,19 +55,19 @@ export default function Info() {
             </Typography>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={6}>
-                    <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
-                        <div className={classes.div}><AccountBoxIcon color="primary"/>{name}</div>
-                        <div className={classes.div}><CakeIcon color="primary"/>{dob}</div>
-                        <div className={classes.div}><LocationOnIcon color="primary" />{location}</div>
-                        <div className={classes.div}><PhoneIphoneIcon color="primary"/>{mobile}</div>
-                        <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/>{email}</div>
+                    <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
+                        <div className={classes.div}><AccountBoxIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{name}</Typography></div>
+                        <div className={classes.div}><CakeIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{dob}</Typography></div>
+                        <div className={classes.div}><LocationOnIcon color="primary" /><Typography variant="body1" component="span" paddingLeft="7px">{location}</Typography></div>
+                        <div className={classes.div}><PhoneIphoneIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mobile}</Typography></div>
+                        <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px">{email}</Typography></div>
                     </Stack>
                 </Grid>
                 <Grid item xs={6}>
                     <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
-                        <div className={classes.div}><LanguageIcon color="primary"/>{mainLanguage}</div>
-                        <div className={classes.div}><LanguageIcon color="primary"/>{secondLanguage}</div>
-                        <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link}>{facebook}</a></div>
+                        <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mainLanguage}</Typography></div>
+                        <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{secondLanguage}</Typography></div>
+                        <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link} >{facebook}</a></div>
                         <div className={classes.div}><GitHubIcon/><a href={github} className={classes.link}>{github}</a></div>
                     </Stack>    
                 </Grid>
@@ -76,9 +76,9 @@ export default function Info() {
             <Typography variant="h6" color="inherit" component="div">
                 Hobbies
             </Typography>
-                <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
-                    <div className={classes.div}><PoolIcon color="primary"/>{hobies[0]}</div>
-                    <div className={classes.div}><BookIcon color="primary"/>{hobies[1]}</div>
+                <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
+                    <div className={classes.div}><PoolIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{hobies[0]}</Typography></div>
+                    <div className={classes.div}><BookIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{hobies[1]}</Typography></div>
                 </Stack>
             <hr/>
         </Box>
@@ -91,6 +91,7 @@ const useStyles = makeStyles(theme => ({
     link:{
         textDecoration: "none",
         color: "black",
+        paddingLeft: "7px",
         "&:hover": {
             color: "red",
             borderBottom: "1px solid white",

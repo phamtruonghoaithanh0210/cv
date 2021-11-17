@@ -4,8 +4,8 @@ import Logo from "../static/images/anhcv.png"
 
 export default function Avatar() {
     return (
-        <Card sx={{ maxWidth: 445 }}>
-            <CardActionArea>
+        <Card sx={{ maxWidth: 445}} >
+            <CardActionArea >
                 <CardMedia
                 component="img"
                 height="360"
@@ -13,12 +13,12 @@ export default function Avatar() {
                 alt="anh của thanh"
                 />
                 <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                    Pham Truong Hoai Thanh
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    Fontend Developer
-                </Typography>
+                    <Typography gutterBottom variant="h6" component="div">
+                        Pham Truong Hoai Thanh
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        Fontend Developer
+                    </Typography>
                 </CardContent>
             </CardActionArea>
         </Card>

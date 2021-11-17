@@ -16,7 +16,7 @@ function Education() {
         <Box
         sx={{
         width: 766,
-        height: 280,
+        height: 260,
         padding: 2,
         borderRight: '1px solid grey',
         '&:hover': {
@@ -28,14 +28,14 @@ function Education() {
         <Typography variant="h6" color="inherit" component="div">
         Education
         </Typography>
-        <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
-                    <div className={classes.div}><SchoolIcon color="primary"/>{data.school}</div>
-                    <div className={classes.div}><LaptopChromebookIcon color="primary"/>{data.major}</div>
-                    <div className={classes.div}><ScheduleIcon color="primary"/>{data.time}</div>
-                    <div className={classes.div}><CheckCircleOutlineIcon color="primary"/>achievements</div> 
+        <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
+                    <div className={classes.div}><SchoolIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{data.school}</Typography></div>
+                    <div className={classes.div}><LaptopChromebookIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{data.major}</Typography></div>
+                    <div className={classes.div}><ScheduleIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{data.time}</Typography></div>
+                    <div className={classes.div}><CheckCircleOutlineIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">Achievements</Typography></div> 
 
         </Stack>
-        <Typography variant="body2" color="inherit" component="div">
+        <Typography variant="body1" color="inherit" component="div">
             <ul>{Edu}</ul>
         </Typography>
         <hr/>

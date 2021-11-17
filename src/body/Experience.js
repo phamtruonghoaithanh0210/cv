@@ -29,7 +29,7 @@ function Experience() {
             <Timeline position="right" className={classes.typo}>
                 <TimelineItem  >
                     <TimelineSeparator>
-                        <TimelineDot>
+                        <TimelineDot variant="outlined">
                             <LaptopMacIcon color="primary" />
                         </TimelineDot>
                         <TimelineConnector />
@@ -41,26 +41,26 @@ function Experience() {
                         <Typography variant="h6" style={{color:"#190033"}} component="div">
                             {t["projects"][0].name}
                         </Typography>
-                        <Typography variant="body2" style={{color:"#d9376e"}} component="div">
+                        <Typography variant="body1" style={{color:"#d9376e"}} component="div">
                             Skills:
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="div" paddingLeft="15px">
+                        <Typography variant="body1" color="inherit" component="div" paddingLeft="15px">
                             {t.skills}
                         </Typography>
-                        <Typography variant="body2" style={{color:"#d9376e"}} component="div">
+                        <Typography variant="body1" style={{color:"#d9376e"}} component="div">
                             Topic:
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="div" paddingLeft="15px">
+                        <Typography variant="body1" color="inherit" component="div" paddingLeft="15px">
                             {t["projects"][0].description}
                         </Typography>
-                        <Typography variant="body2" style={{color:"#d9376e"}} component="div">
+                        <Typography variant="body1" style={{color:"#d9376e"}} component="div">
                             Responsibilities:
                         </Typography>
                         {ListResponsibilities}
-                        <Typography variant="body2" color="inherit" component="span" style={{color:"#d9376e"}}>
+                        <Typography variant="body1" color="inherit" component="span" style={{color:"#d9376e"}}>
                             Git:
                         </Typography>
-                        <Typography variant="body2" color="inherit" component="span" >
+                        <Typography variant="body1" color="inherit" component="span" >
                             <a href={t["projects"][0].git} className={classes.link}> {t["projects"][0].git}</a>
                         </Typography>
                     </TimelineContent>
@@ -72,7 +72,7 @@ function Experience() {
         <Box
             sx={{
             width: 766,
-            height: 1500,
+            height: 1600,
             padding: 2,
             borderRight: '1px solid grey',
             '&:hover': {
@@ -91,13 +91,13 @@ function Experience() {
 }
 const useStyles = makeStyles(theme => ({
     typo:{
-        width: "700px",
+        width: "800px",
     },
     link:{
         textDecoration: "none",
         color: "black",
         "&:hover": {
-            color: "#f9bc60",
+            color: "red",
             borderBottom: "1px solid white",
         },
     }
