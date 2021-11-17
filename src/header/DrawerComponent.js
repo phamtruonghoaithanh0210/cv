@@ -16,6 +16,11 @@ export default function DrawerComponent() {
                             <Link to="/"  className={classes.link}>Home</Link>    
                         </ListItemText>
                     </ListItem>
+                    <ListItem onClick={()=> setOpenDrawer(false)}> 
+                        <ListItemText>
+                            <Link to="/relax" className={classes.link}>Relax</Link>  
+                        </ListItemText>
+                    </ListItem>
                 </List>
             </Drawer> 
             <IconButton onClick={() => setOpenDrawer(!openDrawer)} className={classes.icon}>
@@ -28,8 +33,12 @@ export default function DrawerComponent() {
 const useStyles = makeStyles( () => ({
     link: {
         textDecoration: "none",
-        color: "Blue",
+        color: "#8bd3dd",
         fontSize : "20px",
+        "&:hover": {
+            color: "Blue",
+            borderBottom: "1px solid white",
+        },
     },
     icon : {
         color : "red"

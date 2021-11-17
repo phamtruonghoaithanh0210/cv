@@ -19,8 +19,7 @@ export default function Header() {
                 {isMobile ? (<DrawerComponent/>) : (
                     <div className={classes.navlinks}>
                         <Link to="/" className={classes.link}>Home</Link>
-                        <Link to="/skill" className={classes.link}>SKills</Link>
-                        <Link to="/experiences" className={classes.link}>Experiences</Link>
+                        <Link to="/relax" className={classes.link}>Relax</Link> 
                     </div>
                     )
                 }
