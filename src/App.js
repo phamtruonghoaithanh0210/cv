@@ -3,6 +3,7 @@ import {ThemeProvider, createTheme} from "@mui/material"
 import {BrowserRouter, Route, Link} from "react-router-dom"
 import Header from './header/Header';
 import Body from './body/Body'
+import Footer from './footer/Footer';
 
 const theme = createTheme();
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Header/>
         <Body />
+        <Footer/>
       </BrowserRouter>
     </ThemeProvider>
     
