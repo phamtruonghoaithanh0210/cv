@@ -50,24 +50,24 @@ const Activity = data.map((a)=> {
                     <Typography variant="h6" style={{color:"#0B8790"}} component="div">
                         {a.time}
                     </Typography>
-                    <Typography variant="body2"  style={{color:"#d9376e"}} component="span">
+                    <Typography variant="body1"  style={{color:"#d9376e"}} component="span">
                         Name:
                     </Typography>
-                    <Typography variant="body2" color="inherit" component="span" paddingLeft="5px" >
+                    <Typography variant="body1" color="inherit" component="span" paddingLeft="5px" >
                         {a.name}
                     </Typography>
-                    <Typography variant="body2" color="inherit" component="div" >
+                    <Typography variant="body1" color="inherit" component="div" >
                     </Typography>
-                    <Typography variant="body2" style={{color:"#d9376e"}} component="span">
+                    <Typography variant="body1" style={{color:"#d9376e"}} component="span">
                         Role: 
                     </Typography>
-                    <Typography variant="body2" color="inherit" component="span" paddingLeft="5px">
+                    <Typography variant="body1" color="inherit" component="span" paddingLeft="5px">
                         {a.role}
                     </Typography>
-                    <Typography variant="body2"  style={{color:"#d9376e"}} component="div">
+                    <Typography variant="body1"  style={{color:"#d9376e"}} component="div">
                         Description:
                     </Typography>
-                    <Typography variant="body2" color="inherit" component="div" paddingLeft="5px">
+                    <Typography variant="body1" color="inherit" component="div" paddingLeft="5px">
                         {a.description}
                     </Typography>
                 </TimelineContent>
