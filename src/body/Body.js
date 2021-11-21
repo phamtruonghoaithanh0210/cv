@@ -10,6 +10,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
+import ThreeGIFT from '../three/ThreeGIFT';
 
 const actions = [
     { icon: <FileCopyIcon />, name: 'Copy' },
@@ -22,7 +23,7 @@ const actions = [
 export default function Body() {
     return (
     <Container>
-        
+        <ThreeGIFT/>
         <Grid container spacing={0.5}>
             <Grid item xs={6} md={4}>
                 <Box mt={8}>
@@ -52,9 +53,6 @@ export default function Body() {
                 </Box>
             </Grid>
         </Grid>
-        {/* <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
-
-        </Box> */}
     </Container>
     
     )
