@@ -18,6 +18,26 @@ export default function DrawerComponent() {
                     </ListItem>
                     <ListItem onClick={()=> setOpenDrawer(false)}> 
                         <ListItemText>
+                            <Link to="/education" className={classes.link}>Education</Link>  
+                        </ListItemText>
+                    </ListItem>
+                    <ListItem onClick={()=> setOpenDrawer(false)}> 
+                        <ListItemText>
+                            <Link to="/experience" className={classes.link}>Experience</Link>  
+                        </ListItemText>
+                    </ListItem>
+                    <ListItem onClick={()=> setOpenDrawer(false)}> 
+                        <ListItemText>
+                            <Link to="/profile" className={classes.link}>Profile</Link>  
+                        </ListItemText>
+                    </ListItem>
+                    <ListItem onClick={()=> setOpenDrawer(false)}> 
+                        <ListItemText>
+                            <Link to="/activity" className={classes.link}>Activity</Link>  
+                        </ListItemText>
+                    </ListItem>
+                    <ListItem onClick={()=> setOpenDrawer(false)}> 
+                        <ListItemText>
                             <Link to="/relax" className={classes.link}>Relax</Link>  
                         </ListItemText>
                     </ListItem>
