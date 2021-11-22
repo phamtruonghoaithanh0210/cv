@@ -3,6 +3,7 @@ import {AppBar, CssBaseline, Toolbar, Typography,useMediaQuery} from "@mui/mater
 import {makeStyles, useTheme} from "@mui/styles"
 import {Link} from "react-router-dom"
 import DrawerComponent from "./DrawerComponent"
+import { red } from '@mui/material/colors'
 
 export default function Header() {
     
@@ -10,9 +11,9 @@ export default function Header() {
     const classes = useStyles();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"))
     return (
-        <AppBar  position="static">
+        <AppBar  position="static" >
             <CssBaseline/>
-            <Toolbar variant="dense">
+            <Toolbar variant="dense" className={classes.nav}>
                 <Typography variant="h6" md={4} color="inherit" component="div" className={classes.logo}>
                 Hoai Thanh
                 </Typography>
@@ -52,5 +53,13 @@ const useStyles = makeStyles(theme => ({
             color: "yellow",
             borderBottom: "1px solid white",
         },
+    },
+    nav:{
+        width: "100%",
+        [theme.breakpoints.down("md")]:{
+            width: "100%",
+            backgroundColor: theme.palette.primary.main,
+            color: red,
+        }
     }
 }))
