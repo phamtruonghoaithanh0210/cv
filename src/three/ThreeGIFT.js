@@ -48,6 +48,8 @@ const useStyles = makeStyles( (theme) => ({
         padding: "10px",
         [theme.breakpoints.down("md")]:{
             height: "300px",
+            padding: "0px",
+            marginBottom: "5px"
         }
     }
 }))

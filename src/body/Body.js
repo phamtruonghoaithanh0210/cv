@@ -1,6 +1,6 @@
 import React from 'react'
-import {Grid, Paper, Container, Box, SpeedDialIcon, SpeedDialAction,SpeedDial } from "@mui/material"
-import { styled } from '@mui/styles';
+import {Grid, Container, Box, SpeedDialIcon, SpeedDialAction,SpeedDial, useMediaQuery } from "@mui/material"
+import { useTheme } from '@mui/styles';
 import  Avatar from "./Avatar"
 import Info from './Info'
 import Experience from './Experience';
@@ -21,17 +21,14 @@ const actions = [
 
 
 export default function Body() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"))
     return (
-    <Container>
-        <ThreeGIFT/>
-        <Grid container spacing={0.5}>
-            <Grid item xs={6} md={4}>
-                <Box mt={8}>
+        <>
+            {isMobile ? (
+                <>
+                    <ThreeGIFT/>
                     <Avatar/>
-                </Box>
-            </Grid>
-            <Grid item xs={6} md={8}>
-                <Box mt={2}>
                     <Info />
                     <Education/>
                     <Experience/>
@@ -50,16 +47,49 @@ export default function Body() {
                         />
                         ))}
                     </SpeedDial>
-                </Box>
-            </Grid>
-        </Grid>
-    </Container>
-    
+                </>
+            ) 
+            : (
+            <Container>
+                    <ThreeGIFT/>
+                <Grid container spacing={0.5}>
+                        <Grid item xs={6} md={4}>
+                            <Box mt={8}>
+                                <Avatar/>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={6} md={8}>
+                            <Box mt={2}>
+                                <Info />
+                                <Education/>
+                                <Experience/>
+                                <Activities/>
+                                <SpeedDial
+                                    style={{position:"fixed"}}
+                                    ariaLabel="SpeedDial basic example"
+                                    sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                                    icon={<SpeedDialIcon />}
+                                >
+                                    {actions.map((action) => (
+                                    <SpeedDialAction
+                                        key={action.name}
+                                        icon={action.icon}
+                                        tooltipTitle={action.name}
+                                    />
+                                    ))}
+                                </SpeedDial>
+                            </Box>
+                        </Grid>
+                </Grid>
+            </Container>
+            )
+        }
+        </>
     )
 }
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+//     ...theme.typography.body2,
+//     padding: theme.spacing(1),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+// }));

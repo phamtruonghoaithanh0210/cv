@@ -2,7 +2,7 @@ import React from 'react'
 import {Typography, Box} from "@mui/material"
 import dataCV from "../data/cv.json"
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineSeparator } from "@mui/lab"
-import { withStyles} from "@mui/styles" 
+import { withStyles, makeStyles} from "@mui/styles" 
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const TimelineItem = withStyles({
@@ -14,20 +14,9 @@ const TimelineItem = withStyles({
 })(MuiTimelineItem);
 
 function Activities() {
+    const classes = useStyles();
     return (
-        <Box
-        sx={{
-        width: 766,
-        height: 550,
-        padding: 2,
-        borderRight: '1px solid grey',
-        borderBottom: '1px solid grey',
-        '&:hover': {
-            backgroundColor: '#abd1c6',
-            opacity: [0.9, 0.8, 0.7],
-        },
-        }}
-    >
+        <Box className={classes.box}>
         <Typography variant="h6" color="inherit" component="div">
             Activities
         </Typography>
@@ -75,4 +64,17 @@ const Activity = data.map((a)=> {
         </Timeline>            
     )
 })
+const useStyles = makeStyles(theme => ({
+    box:{
+        width: "100%",
+        height: "100%",
+        padding: "2",
+        borderRight: '1px solid grey',
+        '&:hover': {
+            backgroundColor: '#9AD4DC',
+            opacity: [1, 1, 1],
+        }
+    }
+
+}))
 export default Activities

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Typography, Grid, Stack} from '@mui/material'
+import {Box, Typography, Grid, Stack, useMediaQuery} from '@mui/material'
 import dataCV from "../data/cv.json"
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import CakeIcon from '@mui/icons-material/Cake';
@@ -12,7 +12,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PoolIcon from '@mui/icons-material/Pool';
 import BookIcon from '@mui/icons-material/Book';
 import { red } from '@mui/material/colors';
-import {makeStyles} from "@mui/styles"
+import {makeStyles, useTheme} from "@mui/styles"
 
 export default function Info() {
     const hobies = dataCV["hobbies"]
@@ -29,20 +29,10 @@ export default function Info() {
     const github = dataCV["info"]["github"]
 
     const classes = useStyles();
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"))
     return (
-        <Box
-            sx={{
-            width: 766,
-            height: 550,
-            padding: 2,
-            borderRight: '1px solid grey',
-            borderTop: '1px solid grey',
-            '&:hover': {
-                backgroundColor: '#e3f6f5',
-                opacity: [0.9, 0.8, 0.7],
-            },
-            }}
-        >
+        <Box className={classes.box}>
             <Typography variant="h6" color="inherit" component="div">
                 Introduction
             </Typography>
@@ -53,25 +43,44 @@ export default function Info() {
             <Typography variant="h6" color="inherit" component="div">
                 Personal Info
             </Typography>
-            <Grid container spacing={2} columns={12}>
-                <Grid item xs={6}>
-                    <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
-                        <div className={classes.div}><AccountBoxIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{name}</Typography></div>
-                        <div className={classes.div}><CakeIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{dob}</Typography></div>
-                        <div className={classes.div}><LocationOnIcon color="primary" /><Typography variant="body1" component="span" paddingLeft="7px">{location}</Typography></div>
-                        <div className={classes.div}><PhoneIphoneIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mobile}</Typography></div>
-                        <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px">{email}</Typography></div>
-                    </Stack>
-                </Grid>
-                <Grid item xs={6}>
-                    <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
-                        <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mainLanguage}</Typography></div>
-                        <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{secondLanguage}</Typography></div>
-                        <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link} >{facebook}</a></div>
-                        <div className={classes.div}><GitHubIcon/><a href={github} className={classes.link}>{github}</a></div>
-                    </Stack>    
-                </Grid>
-            </Grid>
+                {isMobile ? (
+                    <Grid container spacing={2} columns={12}>
+                        <Grid item xs={12}>
+                            <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
+                                <div className={classes.div}><AccountBoxIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{name}</Typography></div>
+                                <div className={classes.div}><CakeIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{dob}</Typography></div>
+                                <div className={classes.div}><LocationOnIcon color="primary" /><Typography variant="body1" component="span" paddingLeft="7px">{location}</Typography></div>
+                                <div className={classes.div}><PhoneIphoneIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mobile}</Typography></div>
+                                <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px">{email}</Typography></div>
+                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mainLanguage}</Typography></div>
+                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{secondLanguage}</Typography></div>
+                                <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link} >{facebook}</a></div>
+                                <div className={classes.div}><GitHubIcon/><a href={github} className={classes.link}>{github}</a></div>
+                            </Stack>    
+                        </Grid>
+                    </Grid>
+                ) : (
+                    <Grid container spacing={2} columns={12}>
+                        <Grid item xs={6}>
+                            <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
+                                <div className={classes.div}><AccountBoxIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{name}</Typography></div>
+                                <div className={classes.div}><CakeIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{dob}</Typography></div>
+                                <div className={classes.div}><LocationOnIcon color="primary" /><Typography variant="body1" component="span" paddingLeft="7px">{location}</Typography></div>
+                                <div className={classes.div}><PhoneIphoneIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mobile}</Typography></div>
+                                <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px">{email}</Typography></div>
+                            </Stack>
+                        </Grid>
+                        <Grid item xs={6}>
+                            <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
+                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mainLanguage}</Typography></div>
+                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{secondLanguage}</Typography></div>
+                                <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link} >{facebook}</a></div>
+                                <div className={classes.div}><GitHubIcon/><a href={github} className={classes.link}>{github}</a></div>
+                            </Stack>    
+                        </Grid>
+                    </Grid>
+                )}
+            
             <hr/>
             <Typography variant="h6" color="inherit" component="div">
                 Hobbies
@@ -80,7 +89,7 @@ export default function Info() {
                     <div className={classes.div}><PoolIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{hobies[0]}</Typography></div>
                     <div className={classes.div}><BookIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{hobies[1]}</Typography></div>
                 </Stack>
-            <hr/>
+            <hr className={classes.hr}/>
         </Box>
     )
 }
@@ -96,6 +105,20 @@ const useStyles = makeStyles(theme => ({
             color: "red",
             borderBottom: "1px solid white",
         },
+    },
+    box:{
+            width: "100%",
+            height: "100%",
+            padding: "2",
+            borderRight: '1px solid grey',
+            borderTop: '1px solid grey',
+            '&:hover': {
+                backgroundColor: '#e3f6f5',
+                opacity: [0.9, 0.8, 0.7],
+            }
+    },
+    hr:{
+        marginBottom : "0",
     }
 
 }))

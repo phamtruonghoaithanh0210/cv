@@ -13,18 +13,7 @@ function Education() {
     const classes = useStyles();
     return (
         
-        <Box
-        sx={{
-        width: 766,
-        height: 260,
-        padding: 2,
-        borderRight: '1px solid grey',
-        '&:hover': {
-            backgroundColor: '#bae8e8',
-            opacity: [0.9, 0.8, 0.7],
-        },
-        }}
-    >
+        <Box className={classes.box}>
         <Typography variant="h6" color="inherit" component="div">
         Education
         </Typography>
@@ -38,7 +27,7 @@ function Education() {
         <Typography variant="body1" color="inherit" component="div">
             <ul>{Edu}</ul>
         </Typography>
-        <hr/>
+        <hr className={classes.hr}/>
     </Box>        
     )
 }
@@ -47,6 +36,20 @@ const useStyles = makeStyles(theme => ({
     div:{
         display: 'flex',
     },
+    box:{
+        width: "100%",
+        height: "100%",
+        padding: "2",
+        borderRight: '1px solid grey',
+        '&:hover': {
+            backgroundColor: '#e3f6f5',
+            opacity: [1, 1, 1],
+        }
+    },
+    hr:{
+        marginBottom : "0",
+    }
+
 }))
 
 export default Education
