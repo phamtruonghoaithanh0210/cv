@@ -15,7 +15,7 @@ export default function Header() {
             <CssBaseline/>
             <Toolbar variant="dense" className={classes.nav}>
                 <Typography variant="h6" md={4} color="inherit" component="div" className={classes.logo}>
-                Hoai Thanh
+                    <Link to="/" className={classes.logoLink}>Hoai Thanh</Link>
                 </Typography>
                 {isMobile ? (<DrawerComponent/>) : (
                     <div className={classes.navlinks}>
@@ -43,6 +43,10 @@ const useStyles = makeStyles(theme => ({
         textAlign: "center",
         flexGrow : 1,
         cursor: "pointer",
+    },
+    logoLink : {
+        textDecoration: "none",
+        color: "white",
     },
     link:{
         textDecoration: "none",
