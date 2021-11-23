@@ -101,7 +101,8 @@
                     "responsibilities": [
                         "I tried using Material to make UI.",
                         "I first tried loading 3D models using react-three-fiber library.",
-                        "Responsive Website for Mobile UI."
+                        "Responsive Website for Mobile UI.",
+                        "Deploy with Vercel."
                     ],
                     "link":""
                 }
