@@ -1,9 +1,8 @@
 import React from 'react'
-import {Box, Typography,useMediaQuery, Link, Button } from '@mui/material'
+import {Box, Typography,useMediaQuery, Link } from '@mui/material'
 import {Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem as MuiTimelineItem, TimelineSeparator } from "@mui/lab"
 import dataCV from "../data/cv.json"
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import SendIcon from '@mui/icons-material/Send';
 import {makeStyles, withStyles, useTheme} from "@mui/styles" 
 
 const TimelineItem = withStyles({
@@ -65,8 +64,8 @@ function Experience() {
                         </Typography>
                         <Typography variant="body1" color="inherit" component="span" >
                             {isMobile ? (
-                                <Link href={t["projects"][0].git} underline="none" color="inherit"
-                            className={classes.link}>Link github of projects</Link>
+                                <Link href={t["projects"][0].git} underline="none" color="error"
+                            className={classes.link}>Link github of project</Link>
                             ) : (
                             <Link href={t["projects"][0].git} underline="none" color="inherit"
                             className={classes.link}>{t["projects"][0].git}</Link>
@@ -80,7 +79,7 @@ function Experience() {
     return (
         <Box className={classes.box}>
             <Typography variant="h6" color="inherit" component="div">
-                Experience
+                Experiences
             </Typography>
             {History}
             <hr className={classes.hr}/>

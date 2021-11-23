@@ -19,7 +19,7 @@ export default function Avatar() {
                     <Typography gutterBottom variant="h6" component="div">
                         Pham Truong Hoai Thanh
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body1" color="inherit" component="div" style={{paddingBottom:"5px"}}>
                         Fontend Developer
                     </Typography>
                     <Chip icon={<CodeIcon />} label="JavaScript" variant="outlined" />
