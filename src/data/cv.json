@@ -64,7 +64,7 @@
                     "description": "The topic is Bus Ticketing System",
                     "git" : "https://github.com/phamtruonghoaithanh0210/QL-DatVeXeKhach",
                     "responsibilities": [
-                        "My team has two menbers. In backend, I created model of database, created some API. Thu user is Authenticated with Oauth2.",
+                        "My team has two menbers. In backend, I created model of database, created some API. The user is Authenticated with Oauth2.",
                         "I used wit.ai and Facebook Graph API to created a bot chat for web with handle NLP.",
                         "With payment online, I am used Stripe API. I used Mailchimp API for mail marketing and sengird API for mailing.",
                         "First time I tried deploy a projects on Heroku"  
@@ -92,14 +92,16 @@
         },
         {
             "time" : "NOV 2021 - Now",
-            "skills" : "Reactjs, Material-UI, HTML5/CSS3, Javascript.",
+            "skills" : "Reactjs, Material-UI, HTML5/CSS3, Javascript, Threejs",
             "projects": [
                 {
                     "name":"Mini Project Curriculum Vitae",
                     "description": "The topic is Curriculum Vitae ",
                     "git" : "https://github.com/phamtruonghoaithanh0210/cv",
                     "responsibilities": [
-                        "I tried using Material to make UI."
+                        "I tried using Material to make UI.",
+                        "I first tried loading 3D models using react-three-fiber library.",
+                        "Responsive Website for Mobile UI."
                     ],
                     "link":""
                 }
