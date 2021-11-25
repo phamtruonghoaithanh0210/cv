@@ -3,13 +3,24 @@ import {AppBar, CssBaseline, Toolbar, Typography,useMediaQuery} from "@mui/mater
 import {makeStyles, useTheme} from "@mui/styles"
 import {Link} from "react-router-dom"
 import DrawerComponent from "./DrawerComponent"
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import IconButton from '@mui/material/IconButton';
 import { red } from '@mui/material/colors'
 
-export default function Header() {
-    
+export default function Header(props) {
     const theme = useTheme();
     const classes = useStyles();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+
+    function changeTheme(){
+        if(props.theme === 'light'){
+            props.setTheme("dark")
+        }else{
+            props.setTheme("light")
+        }
+    }
+
     return (
         <AppBar  position="static" >
             <CssBaseline/>
@@ -28,6 +39,9 @@ export default function Header() {
                     </div>
                     )
                 }
+                <IconButton onClick={changeTheme} color="inherit">
+                    {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                </IconButton>
             </Toolbar>
         </AppBar>
     )

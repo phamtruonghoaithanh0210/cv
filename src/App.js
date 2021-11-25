@@ -1,6 +1,6 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, useMemo} from 'react';
 import './App.css';
-import {ThemeProvider, createTheme} from "@mui/material"
+import {ThemeProvider, createTheme, } from "@mui/material"
 import {BrowserRouter,Routes, Route} from "react-router-dom"
 import Header from './header/Header';
 import Body from './body/Body'
@@ -11,14 +11,33 @@ import ProfileH from './header/ProfileH';
 import ActivityH from './header/ActivityH';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
-const theme = createTheme();
+
+const ColorModeContext = React.createContext({ toggeColorMode: () => {} });
+
 function App() {
+  const [mode, setMode] = useState("light")
+  
+  const colorMode = useMemo(()=> ({
+    toggleColorMode: () => {
+        setMode( (prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+    }
+    }),[],
+)  
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode],
+  );
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
     setTimeout( () => {
       setLoading(false)
-    },8000)
+    },5000)
   }, [])
   return (
     <>
@@ -37,9 +56,10 @@ function App() {
       />
       </div>
     ) : (
+    <ColorModeContext.Provider value={colorMode}>  
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <Header/>
+          <Header theme={mode} setTheme={setMode} />
           <Routes>
             <Route exact path="/" element={<Body/>} />
             <Route exact  path="/home" element={<Body/>} />
@@ -51,6 +71,7 @@ function App() {
           <Footer/>
         </BrowserRouter>
       </ThemeProvider>
+    </ColorModeContext.Provider>  
     )}
     </>
   )

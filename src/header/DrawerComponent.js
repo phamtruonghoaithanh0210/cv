@@ -53,7 +53,7 @@ export default function DrawerComponent() {
 const useStyles = makeStyles( () => ({
     link: {
         textDecoration: "none",
-        color: "#8bd3dd",
+        color: "#0000CC",
         fontSize : "20px",
         "&:hover": {
             color: "Blue",
