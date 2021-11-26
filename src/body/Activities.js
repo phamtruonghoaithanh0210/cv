@@ -31,7 +31,7 @@ const Activity = data.map((a)=> {
             <TimelineItem  >
                 <TimelineSeparator>
                         <TimelineDot variant="outlined">
-                            <FavoriteBorderIcon style={{color:"red"}}  />
+                            <FavoriteBorderIcon color="primary"  />
                         </TimelineDot>
                     <TimelineConnector />
                 </TimelineSeparator>

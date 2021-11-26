@@ -1,14 +1,16 @@
 import React from 'react'
 import {Typography, Box} from "@mui/material"
+import {useTheme} from "@mui/styles"
 
 function Footer() {
+    const theme = useTheme();
     return (
     <Box
         sx={{
         width: "100%",
         padding: 2,
         marginTop: 5,
-        backgroundColor: '#1976d2',
+        backgroundColor: theme.palette.primary.main,
         borderRight: '1px solid grey',
         borderBottom: '1px solid grey',
         textAlign:"center",

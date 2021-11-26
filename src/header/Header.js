@@ -24,7 +24,7 @@ export default function Header(props) {
     return (
         <AppBar  position="static" >
             <CssBaseline/>
-            <Toolbar variant="dense" className={classes.nav}>
+            <Toolbar variant="dense" className={classes.nav} >
                 <Typography variant="h6" md={4} color="inherit" component="div" className={classes.logo}>
                     <Link to="/" className={classes.logoLink}>Hoai Thanh</Link>
                 </Typography>
@@ -60,11 +60,11 @@ const useStyles = makeStyles(theme => ({
     },
     logoLink : {
         textDecoration: "none",
-        color: "white",
+        color: "black",
     },
     link:{
         textDecoration: "none",
-        color: "white",
+        color: "black",
         fontSize: "20px",
         marginLeft: theme.spacing(10),
         "&:hover": {
@@ -74,6 +74,7 @@ const useStyles = makeStyles(theme => ({
     },
     nav:{
         width: "100%",
+        backgroundColor: theme.palette.primary.main,
         [theme.breakpoints.down("md")]:{
             width: "100%",
             backgroundColor: theme.palette.primary.main,

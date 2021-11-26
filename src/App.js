@@ -10,6 +10,7 @@ import ExperienceH from './header/ExperienceH';
 import ProfileH from './header/ProfileH';
 import ActivityH from './header/ActivityH';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import { amber, deepOrange, grey } from '@mui/material/colors';
 
 
 const ColorModeContext = React.createContext({ toggeColorMode: () => {} });
@@ -28,10 +29,34 @@ function App() {
       createTheme({
         palette: {
           mode,
+          ...(mode === 'light' ? {
+              primary : amber,
+              divider: amber[200],
+              background : {
+                default: amber[50],
+                paper: amber[50],
+              },
+              text: {
+                primary: grey[900],
+                secondary : grey[800],
+              },
+          } : {
+            primary: deepOrange,
+            divider: deepOrange[200],
+            background : {
+              default: grey[900],
+              paper: grey[900],
+            },
+            text: {
+              primary: "#fff",
+              secondary: grey[500],
+            },
+          })
         },
       }),
     [mode],
   );
+  console.info(theme)
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
