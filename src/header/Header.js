@@ -25,7 +25,7 @@ export default function Header(props) {
         <AppBar  position="static" >
             <CssBaseline/>
             <Toolbar variant="dense" className={classes.nav} >
-                <Typography variant="h6" md={4} color="inherit" component="div" className={classes.logo}>
+                <Typography variant="h6" md={4}  component="div" className={classes.logo}>
                     <Link to="/" className={classes.logoLink}>Hoai Thanh</Link>
                 </Typography>
                 {isMobile ? (<DrawerComponent/>) : (
@@ -60,11 +60,11 @@ const useStyles = makeStyles(theme => ({
     },
     logoLink : {
         textDecoration: "none",
-        color: "black",
+        color: theme.palette.text.primary,
     },
     link:{
         textDecoration: "none",
-        color: "black",
+        color: theme.palette.text.primary,
         fontSize: "20px",
         marginLeft: theme.spacing(10),
         "&:hover": {

@@ -33,7 +33,7 @@ export default function Info() {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"))
     return (
         <Box className={classes.box}>
-            <Typography variant="h6" color="inherit" component="div">
+            <Typography variant="h5" color="inherit" component="div">
                 Introduction
             </Typography>
             <Typography variant="body1" color="inherit" component="div">
@@ -102,7 +102,7 @@ const useStyles = makeStyles(theme => ({
         color: "black",
         paddingLeft: "7px",
         "&:hover": {
-            color: "red",
+            color: "#f25042",
             borderBottom: "1px solid white",
         },
     },
@@ -112,8 +112,9 @@ const useStyles = makeStyles(theme => ({
             padding: "2",
             borderRight: '1px solid grey',
             borderTop: '1px solid grey',
+            backgroundColor: theme.palette.divider,
             '&:hover': {
-                backgroundColor: '#e3f6f5',
+                backgroundColor: '#DEC3A5',
                 opacity: [0.9, 0.8, 0.7],
             }
     },

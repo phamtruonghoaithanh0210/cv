@@ -70,7 +70,9 @@ const useStyles = makeStyles(theme => ({
         height: "100%",
         padding: "2",
         borderRight: '1px solid grey',
+        borderTop: '1px solid grey',
         borderBottom: '1px solid grey',
+        backgroundColor: theme.palette.divider,
         '&:hover': {
             backgroundColor: '#9AD4DC',
             opacity: [1, 1, 1],

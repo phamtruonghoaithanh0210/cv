@@ -16,7 +16,7 @@ function Footer() {
         textAlign:"center",
         }}
     >
-        <Typography variant="body2" component="span" style={{color:"white"}}>
+        <Typography variant="body2" component="span" style={{color:theme.palette.text.primary}}>
             @2021 | Pham Truong Hoai Thanh
         </Typography>
     </Box>
