@@ -36,11 +36,12 @@ export default function Body() {
                     <SpeedDial
                         style={{position:"fixed"}}
                         ariaLabel="SpeedDial basic example"
-                        sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                        sx={{ position: 'absolute', bottom: 16, right: 16}}
                         icon={<SpeedDialIcon />}
                     >
                         {actions.map((action) => (
                         <SpeedDialAction
+                            sx={{backgroundColor:"#ffecb3"}}
                             key={action.name}
                             icon={action.icon}
                             tooltipTitle={action.name}
@@ -67,11 +68,12 @@ export default function Body() {
                                 <SpeedDial
                                     style={{position:"fixed"}}
                                     ariaLabel="SpeedDial basic example"
-                                    sx={{ position: 'absolute', bottom: 16, right: 16 }}
+                                    sx={{ position: 'absolute', bottom: 20, right: 16}}
                                     icon={<SpeedDialIcon />}
                                 >
                                     {actions.map((action) => (
                                     <SpeedDialAction
+                                        sx={{backgroundColor:"#ffecb3" }}
                                         key={action.name}
                                         icon={action.icon}
                                         tooltipTitle={action.name}

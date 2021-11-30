@@ -11,7 +11,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PoolIcon from '@mui/icons-material/Pool';
 import BookIcon from '@mui/icons-material/Book';
-import { red } from '@mui/material/colors';
+import { red, grey } from '@mui/material/colors';
 import {makeStyles, useTheme} from "@mui/styles"
 
 export default function Info() {
@@ -33,29 +33,29 @@ export default function Info() {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"))
     return (
         <Box className={classes.box}>
-            <Typography variant="h5" color="inherit" component="div">
-                Introduction
+            <Typography variant="h5" className={classes.typoColor} component="div" >
+                Introduction    
             </Typography>
-            <Typography variant="body1" color="inherit" component="div">
+            <Typography variant="body1" className={classes.typoColor} component="div">
                 <ul>{listSummary}</ul>
             </Typography>
             <hr/>
-            <Typography variant="h6" color="inherit" component="div">
+            <Typography variant="h5"  component="div" className={classes.typoStyle}>
                 Personal Info
             </Typography>
                 {isMobile ? (
                     <Grid container spacing={2} columns={12}>
                         <Grid item xs={12}>
                             <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
-                                <div className={classes.div}><AccountBoxIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{name}</Typography></div>
-                                <div className={classes.div}><CakeIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{dob}</Typography></div>
-                                <div className={classes.div}><LocationOnIcon color="primary" /><Typography variant="body1" component="span" paddingLeft="7px">{location}</Typography></div>
-                                <div className={classes.div}><PhoneIphoneIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mobile}</Typography></div>
-                                <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px">{email}</Typography></div>
-                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mainLanguage}</Typography></div>
-                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{secondLanguage}</Typography></div>
-                                <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link} >{facebook}</a></div>
-                                <div className={classes.div}><GitHubIcon/><a href={github} className={classes.link}>{github}</a></div>
+                                <div className={classes.div}><AccountBoxIcon className={classes.colorIcon} /><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{name}</Typography></div>
+                                <div className={classes.div}><CakeIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{dob}</Typography></div>
+                                <div className={classes.div}><LocationOnIcon className={classes.colorIcon} /><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{location}</Typography></div>
+                                <div className={classes.div}><PhoneIphoneIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{mobile}</Typography></div>
+                                <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{email}</Typography></div>
+                                <div className={classes.div}><LanguageIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{mainLanguage}</Typography></div>
+                                <div className={classes.div}><LanguageIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{secondLanguage}</Typography></div>
+                                <div className={classes.div}><FacebookIcon className={classes.colorIcon}/><a href={facebook} className={classes.link} >{facebook}</a></div>
+                                <div className={classes.div}><GitHubIcon sx={{ color: grey[900] }}/><a href={github} className={classes.link}>{github}</a></div>
                             </Stack>    
                         </Grid>
                     </Grid>
@@ -63,33 +63,32 @@ export default function Info() {
                     <Grid container spacing={2} columns={12}>
                         <Grid item xs={6}>
                             <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
-                                <div className={classes.div}><AccountBoxIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{name}</Typography></div>
-                                <div className={classes.div}><CakeIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{dob}</Typography></div>
-                                <div className={classes.div}><LocationOnIcon color="primary" /><Typography variant="body1" component="span" paddingLeft="7px">{location}</Typography></div>
-                                <div className={classes.div}><PhoneIphoneIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mobile}</Typography></div>
-                                <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px">{email}</Typography></div>
+                                <div className={classes.div}><AccountBoxIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{name}</Typography></div>
+                                <div className={classes.div}><CakeIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{dob}</Typography></div>
+                                <div className={classes.div}><LocationOnIcon className={classes.colorIcon} /><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{location}</Typography></div>
+                                <div className={classes.div}><PhoneIphoneIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{mobile}</Typography></div>
+                                <div className={classes.div}><EmailIcon sx={{ color: red[400] }}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{email}</Typography></div>
                             </Stack>
                         </Grid>
                         <Grid item xs={6}>
                             <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch">
-                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{mainLanguage}</Typography></div>
-                                <div className={classes.div}><LanguageIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{secondLanguage}</Typography></div>
-                                <div className={classes.div}><FacebookIcon color="primary"/><a href={facebook} className={classes.link} >{facebook}</a></div>
-                                <div className={classes.div}><GitHubIcon/><a href={github} className={classes.link}>{github}</a></div>
+                                <div className={classes.div}><LanguageIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{mainLanguage}</Typography></div>
+                                <div className={classes.div}><LanguageIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{secondLanguage}</Typography></div>
+                                <div className={classes.div}><FacebookIcon className={classes.colorIcon}/><a href={facebook} className={classes.link} >{facebook}</a></div>
+                                <div className={classes.div}><GitHubIcon sx={{ color: grey[900] }}/><a href={github} className={classes.link}>{github}</a></div>
                             </Stack>    
                         </Grid>
                     </Grid>
                 )}
             
             <hr/>
-            <Typography variant="h6" color="inherit" component="div">
+            <Typography variant="h5"  component="div" className={classes.typoStyle}>
                 Hobbies
             </Typography>
                 <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
-                    <div className={classes.div}><PoolIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{hobies[0]}</Typography></div>
-                    <div className={classes.div}><BookIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{hobies[1]}</Typography></div>
+                    <div className={classes.div}><PoolIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{hobies[0]}</Typography></div>
+                    <div className={classes.div}><BookIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{hobies[1]}</Typography></div>
                 </Stack>
-            <hr className={classes.hr}/>
         </Box>
     )
 }
@@ -109,17 +108,28 @@ const useStyles = makeStyles(theme => ({
     box:{
             width: "100%",
             height: "100%",
-            padding: "2",
+            padding: "15px",
             borderRight: '1px solid grey',
             borderTop: '1px solid grey',
             backgroundColor: theme.palette.divider,
             '&:hover': {
-                backgroundColor: '#DEC3A5',
-                opacity: [0.9, 0.8, 0.7],
+                backgroundColor: theme.palette.divider,
+                opacity: [0.2, 0.8, 0.7],
             }
     },
     hr:{
         marginBottom : "0",
+    },
+    colorIcon: {
+        color: theme.palette.mauIcon
+    },
+    typoStyle : {
+        paddingBottom: "12px",
+        color : theme.palette.text.secondary
     }
+    ,
+    typoColor: {
+        color : theme.palette.text.secondary
+    },
 
 }))

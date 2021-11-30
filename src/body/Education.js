@@ -14,20 +14,20 @@ function Education() {
     return (
         
         <Box className={classes.box}>
-        <Typography variant="h6" color="inherit" component="div">
+        <Typography variant="h5" component="div"  className={classes.typoStyle}>
         Education
         </Typography>
         <Stack spacing={1.5} direction="column" justifyContent="flex-start" alignItems="stretch" paddingLeft="15px">
-                    <div className={classes.div}><SchoolIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{data.school}</Typography></div>
-                    <div className={classes.div}><LaptopChromebookIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{data.major}</Typography></div>
-                    <div className={classes.div}><ScheduleIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">{data.time}</Typography></div>
-                    <div className={classes.div}><CheckCircleOutlineIcon color="primary"/><Typography variant="body1" component="span" paddingLeft="7px">Achievements</Typography></div> 
+                    <div className={classes.div}><SchoolIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{data.school}</Typography></div>
+                    <div className={classes.div}><LaptopChromebookIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{data.major}</Typography></div>
+                    <div className={classes.div}><ScheduleIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>{data.time}</Typography></div>
+                    <div className={classes.div}><CheckCircleOutlineIcon className={classes.colorIcon}/><Typography variant="body1" component="span" paddingLeft="7px" className={classes.typoColor}>Achievements</Typography></div> 
 
         </Stack>
-        <Typography variant="body1" color="inherit" component="div">
+        <Typography variant="body1" component="div" className={classes.typoColor}>
             <ul>{Edu}</ul>
         </Typography>
-        <hr className={classes.hr}/>
+        {/* <hr className={classes.hr}/> */}
     </Box>        
     )
 }
@@ -39,19 +39,29 @@ const useStyles = makeStyles(theme => ({
     box:{
         width: "100%",
         height: "100%",
-        padding: "2",
+        padding: "15px",
         borderRight: '1px solid grey',
         borderTop: '1px solid grey',
         backgroundColor: theme.palette.divider,
         '&:hover': {
-            backgroundColor: '#e3f6f5',
+            backgroundColor: theme.palette.divider,
             opacity: [1, 1, 1],
         }
     },
     hr:{
         marginBottom : "0",
+    },
+    colorIcon: {
+        color: theme.palette.mauIcon
+    },
+    typoStyle : {
+        paddingBottom: "12px",
+        color : theme.palette.text.secondary
     }
-
+    ,
+    typoColor: {
+        color : theme.palette.text.secondary
+    },
 }))
 
 export default Education

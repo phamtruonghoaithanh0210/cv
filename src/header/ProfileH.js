@@ -34,6 +34,7 @@ function ProfileH() {
                     >
                         {actions.map((action) => (
                         <SpeedDialAction
+                            sx={{backgroundColor:"#ffecb3"}}
                             key={action.name}
                             icon={action.icon}
                             tooltipTitle={action.name}
@@ -61,6 +62,7 @@ function ProfileH() {
                     >
                         {actions.map((action) => (
                         <SpeedDialAction
+                            sx={{backgroundColor:"#ffecb3" }}
                             key={action.name}
                             icon={action.icon}
                             tooltipTitle={action.name}

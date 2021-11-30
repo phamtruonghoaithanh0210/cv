@@ -22,7 +22,7 @@ function Experience() {
     const History = data.map((t)=>{
         const ListResponsibilities = t["projects"][0]["responsibilities"].map((idx) =>{
             return(
-                <Typography variant="body2" color="inherit" component="div" paddingLeft="15px">
+                <Typography variant="body1" className={classes.typoColor} component="div" paddingLeft="15px">
                     {idx}
                 </Typography>
             )
@@ -32,37 +32,37 @@ function Experience() {
                 <TimelineItem  >
                     <TimelineSeparator>
                         <TimelineDot variant="outlined">
-                            <LaptopMacIcon color="primary" />
+                            <LaptopMacIcon className={classes.colorIcon} />
                         </TimelineDot>
                         <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent className={classes.timeline}>
-                        <Typography variant="h6" style={{color:"#0B8790"}} component="div">
+                        <Typography variant="h6" style={{color:"#ef6c00"}} component="div">
                             {t.time}
                         </Typography>
-                        <Typography variant="h6" style={{color:"#190033"}} component="div" >
+                        <Typography variant="h5" style={{color:"#1d3c45"}} component="div" >
                             {t["projects"][0].name}
                         </Typography>
-                        <Typography variant="body1" style={{color:"#d9376e"}} component="div" >
+                        <Typography variant="body1" style={{color:"#e65100"}} component="div" >
                             Skills:
                         </Typography>
-                        <Typography variant="body1" color="inherit" component="div" paddingLeft="15px">
+                        <Typography variant="body1" component="div" paddingLeft="15px" className={classes.typoColor}>
                             {t.skills}
                         </Typography>
-                        <Typography variant="body1" style={{color:"#d9376e"}} component="div" >
+                        <Typography variant="body1" style={{color:"#e65100"}} component="div" >
                             Topic:
                         </Typography>
-                        <Typography variant="body1" color="inherit" component="div" paddingLeft="15px" >
+                        <Typography variant="body1" component="div" paddingLeft="15px" className={classes.typoColor}>
                             {t["projects"][0].description}
                         </Typography>
-                        <Typography variant="body1" style={{color:"#d9376e"}} component="div" >
+                        <Typography variant="body1" style={{color:"#e65100"}} component="div" >
                             Responsibilities:
                         </Typography>
                         {ListResponsibilities}
-                        <Typography variant="body1" color="inherit" component="span" style={{color:"#d9376e"}} >
+                        <Typography variant="body1"  component="span" style={{color:"#e65100"}} >
                             Git:
                         </Typography>
-                        <Typography variant="body1" color="inherit" component="span" >
+                        <Typography variant="body1" component="span" className={classes.typoColor}>
                             {isMobile ? (
                                 <Link href={t["projects"][0].git} underline="none" color="error"
                             className={classes.link}>Link github of project</Link>
@@ -78,11 +78,11 @@ function Experience() {
     })
     return (
         <Box className={classes.box}>
-            <Typography variant="h6" color="inherit" component="div">
+            <Typography variant="h5" component="div" className={classes.typoStyle}>
                 Experiences
             </Typography>
             {History}
-            <hr className={classes.hr}/>
+            {/* <hr className={classes.hr}/> */}
         </Box>
     )
 }
@@ -107,12 +107,12 @@ const useStyles = makeStyles(theme => ({
     box:{
         width: "100%",
         height: "100%",
-        padding: "2",
+        padding: "15px",
         borderRight: '1px solid grey',
         borderTop: '1px solid grey',
         backgroundColor: theme.palette.divider,
         '&:hover': {
-            backgroundColor: '#bae8e8',
+            backgroundColor: theme.palette.divider,
             opacity: [1, 1, 1],
         },
     },
@@ -126,7 +126,17 @@ const useStyles = makeStyles(theme => ({
     },
     hr:{
         marginBottom : "0",
-    }
+    },
+    colorIcon: {
+        color: theme.palette.mauIcon
+    },
+    typoStyle : {
+        paddingBottom: "12px",
+        color : theme.palette.text.secondary
+    },
+    typoColor: {
+        color : theme.palette.text.secondary
+    },
 }))
 
 export default Experience
