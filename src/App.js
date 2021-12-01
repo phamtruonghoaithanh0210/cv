@@ -15,6 +15,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import ShareIcon from '@mui/icons-material/Share';
+import Scroll from './Scroll';
 
 const ColorModeContext = React.createContext({ toggeColorMode: () => {} });
 
@@ -96,6 +97,7 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>  
       <ThemeProvider theme={theme}>
         <BrowserRouter>
+          <Scroll/>
           <Header theme={mode} setTheme={setMode} />
           <Routes>
             <Route exact path="/" element={<Body/>} />
@@ -110,7 +112,7 @@ function App() {
         <SpeedDial
             style={{position:"fixed"}}
             ariaLabel="SpeedDial basic example"
-            sx={{ position: 'absolute', bottom: 20, right: 16}}
+            sx={{ position: 'absolute', bottom: 70, right: 16}}
             icon={<SpeedDialIcon />}
         >
             {actions.map((action) => (
