@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useMemo} from 'react';
 import './App.css';
-import {ThemeProvider, createTheme, } from "@mui/material"
+import {ThemeProvider, createTheme, SpeedDialIcon, SpeedDialAction,SpeedDial } from "@mui/material"
 import {BrowserRouter,Routes, Route} from "react-router-dom"
 import Header from './header/Header';
 import Body from './body/Body'
@@ -11,9 +11,19 @@ import ProfileH from './header/ProfileH';
 import ActivityH from './header/ActivityH';
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import { amber, deepOrange, grey, yellow, blue } from '@mui/material/colors';
-
+import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
+import SaveIcon from '@mui/icons-material/Save';
+import PrintIcon from '@mui/icons-material/Print';
+import ShareIcon from '@mui/icons-material/Share';
 
 const ColorModeContext = React.createContext({ toggeColorMode: () => {} });
+
+const actions = [
+  { icon: <FileCopyIcon />, name: 'Copy' },
+  { icon: <SaveIcon />, name: 'Save' },
+  { icon: <PrintIcon />, name: 'Print' },
+  { icon: <ShareIcon />, name: 'Share' },
+];
 
 function App() {
   const [mode, setMode] = useState("light")
@@ -97,6 +107,21 @@ function App() {
           </Routes>
           <Footer/>
         </BrowserRouter>
+        <SpeedDial
+            style={{position:"fixed"}}
+            ariaLabel="SpeedDial basic example"
+            sx={{ position: 'absolute', bottom: 20, right: 16}}
+            icon={<SpeedDialIcon />}
+        >
+            {actions.map((action) => (
+            <SpeedDialAction
+                sx={{backgroundColor:"#ffecb3" }}
+                key={action.name}
+                icon={action.icon}
+                tooltipTitle={action.name}
+            />
+            ))}
+        </SpeedDial>
       </ThemeProvider>
     </ColorModeContext.Provider>  
     )}
