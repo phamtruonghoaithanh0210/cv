@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useMemo} from 'react';
 import './App.css';
-import {ThemeProvider, createTheme, SpeedDialIcon, SpeedDialAction,SpeedDial } from "@mui/material"
+import {ThemeProvider, createTheme, SpeedDialIcon, SpeedDialAction,SpeedDial, useMediaQuery } from "@mui/material"
 import {BrowserRouter,Routes, Route} from "react-router-dom"
 import Header from './header/Header';
 import Body from './body/Body'
@@ -28,7 +28,7 @@ const actions = [
 
 function App() {
   const [mode, setMode] = useState("light")
-  
+
   const colorMode = useMemo(()=> ({
     toggleColorMode: () => {
         setMode( (prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
@@ -69,7 +69,7 @@ function App() {
       }),
     [mode],
   );
-  console.info(theme)
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     setLoading(true)
@@ -94,38 +94,75 @@ function App() {
       />
       </div>
     ) : (
-    <ColorModeContext.Provider value={colorMode}>  
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Scroll/>
-          <Header theme={mode} setTheme={setMode} />
-          <Routes>
-            <Route exact path="/" element={<Body/>} />
-            <Route exact  path="/home" element={<Body/>} />
-            <Route exact  path="/education" element={<EducationH/>} />
-            <Route exact  path="/experience" element={<ExperienceH/>} />
-            <Route exact  path="/profile" element={<ProfileH/>} />
-            <Route exact  path="/activity" element={<ActivityH/>} />
-          </Routes>
-          <Footer/>
-        </BrowserRouter>
-        <SpeedDial
-            style={{position:"fixed"}}
-            ariaLabel="SpeedDial basic example"
-            sx={{ position: 'absolute', bottom: 70, right: 16}}
-            icon={<SpeedDialIcon />}
-        >
-            {actions.map((action) => (
-            <SpeedDialAction
-                sx={{backgroundColor:"#ffecb3" }}
-                key={action.name}
-                icon={action.icon}
-                tooltipTitle={action.name}
-            />
-            ))}
-        </SpeedDial>
-      </ThemeProvider>
-    </ColorModeContext.Provider>  
+        <>
+          {isMobile ? (
+            <ColorModeContext.Provider value={colorMode}>  
+              <ThemeProvider theme={theme}>
+                <BrowserRouter>
+                  <Header theme={mode} setTheme={setMode} />
+                  <Routes>
+                    <Route exact path="/" element={<Body/>} />
+                    <Route exact  path="/home" element={<Body/>} />
+                    <Route exact  path="/education" element={<EducationH/>} />
+                    <Route exact  path="/experience" element={<ExperienceH/>} />
+                    <Route exact  path="/profile" element={<ProfileH/>} />
+                    <Route exact  path="/activity" element={<ActivityH/>} />
+                  </Routes>
+                  <Footer/>
+                </BrowserRouter>
+                <SpeedDial
+                    style={{position:"fixed"}}
+                    ariaLabel="SpeedDial basic example"
+                    sx={{ position: 'absolute', bottom: 70, right: 16}}
+                    icon={<SpeedDialIcon />}
+                >
+                    {actions.map((action) => (
+                    <SpeedDialAction
+                        sx={{backgroundColor:"#ffecb3" }}
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                    />
+                    ))}
+                </SpeedDial>
+              </ThemeProvider>
+            </ColorModeContext.Provider>
+          ) : (
+            <ColorModeContext.Provider value={colorMode}>  
+              <ThemeProvider theme={theme}>
+                <BrowserRouter>
+                  <Scroll/>
+                  <Header theme={mode} setTheme={setMode} />
+                  <Routes>
+                    <Route exact path="/" element={<Body/>} />
+                    <Route exact  path="/home" element={<Body/>} />
+                    <Route exact  path="/education" element={<EducationH/>} />
+                    <Route exact  path="/experience" element={<ExperienceH/>} />
+                    <Route exact  path="/profile" element={<ProfileH/>} />
+                    <Route exact  path="/activity" element={<ActivityH/>} />
+                  </Routes>
+                  <Footer/>
+                </BrowserRouter>
+                <SpeedDial
+                    style={{position:"fixed"}}
+                    ariaLabel="SpeedDial basic example"
+                    sx={{ position: 'absolute', bottom: 70, right: 16}}
+                    icon={<SpeedDialIcon />}
+                >
+                    {actions.map((action) => (
+                    <SpeedDialAction
+                        sx={{backgroundColor:"#ffecb3" }}
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                    />
+                    ))}
+                </SpeedDial>
+              </ThemeProvider>
+            </ColorModeContext.Provider>
+          )}
+        </>
+        
     )}
     </>
   )

@@ -50,17 +50,17 @@ export default function DrawerComponent() {
     )
 }
 
-const useStyles = makeStyles( () => ({
+const useStyles = makeStyles( (theme) => ({
     link: {
         textDecoration: "none",
-        color: "#0000CC",
+        color: theme.palette.text.primary,
         fontSize : "20px",
         "&:hover": {
-            color: "Blue",
-            borderBottom: "1px solid white",
+            color: theme.palette.primary.main,
+            borderBottom: "1px solid #c51162",
         },
     },
     icon : {
         color : "red"
-    }
+    },
 }))
