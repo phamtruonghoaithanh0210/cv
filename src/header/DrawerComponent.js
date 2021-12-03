@@ -36,11 +36,6 @@ export default function DrawerComponent() {
                             <Link to="/activity" className={classes.link}>Activity</Link>  
                         </ListItemText>
                     </ListItem>
-                    <ListItem onClick={()=> setOpenDrawer(false)}> 
-                        <ListItemText>
-                            <Link to="/relax" className={classes.link}>Relax</Link>  
-                        </ListItemText>
-                    </ListItem>
                 </List>
             </Drawer> 
             <IconButton onClick={() => setOpenDrawer(!openDrawer)} className={classes.icon}>

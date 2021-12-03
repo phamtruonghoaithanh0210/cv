@@ -35,7 +35,6 @@ export default function Header(props) {
                         <Link to="/experience" className={classes.link}>Experience</Link>
                         <Link to="/profile" className={classes.link}>Profile</Link>
                         <Link to="/activity" className={classes.link}>Activity</Link>
-                        <Link to="/relax" className={classes.link}>Relax</Link> 
                     </div>
                     )
                 }
