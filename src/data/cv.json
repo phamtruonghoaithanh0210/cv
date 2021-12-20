@@ -22,34 +22,18 @@
     ],
     "history":[
         {
-            "time" : "OCT 2020 - DEC 2020",
-            "skills" : "Flask Framework, MySql, HTML5/CSS3.",
+            "time" : "NOV 2021 - Now",
+            "skills" : "Reactjs, Material-UI, HTML5/CSS3, Javascript, Threejs",
             "projects": [
                 {
-                    "name":"Mini project 'Softwave Technology'",
-                    "description": "The topic is Book Management website. About user interface and admin interface.",
-                    "git" : "https://github.com/phamtruonghoaithanh0210/CongNghePhanMem",
-                    "responsibilities":[
-                        "I was the core deverloper of backend.",
-                        "My team has two menbers, We work according to the Scrum model.",
-                        "First time I tried 'Code-First'."
-                    ],
-                    "link":""
-                    
-                }
-            ]
-        },
-        {
-            "time" : "MAR 2021 - MAY 2021",
-            "skills" : "JavaFX, MySql, jUnit" ,
-            "projects": [
-                {
-                    "name":"Mini project 'Software Testing'",
-                    "description": "The topic is Manage mobile phone sales",
-                    "git" : "https://github.com/phamtruonghoaithanh0210/KiemThuProject",
-                    "responsibilities":[
-                        "I did the receipt function and receipt details function and wrote unit tests for the function.",
-                        "My team has four menbers."
+                    "name":"Mini Project Curriculum Vitae",
+                    "description": "The topic is Curriculum Vitae ",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/cv",
+                    "responsibilities": [
+                        "I tried using Material to make UI.",
+                        "I first tried loading 3D models using react-three-fiber library.",
+                        "Responsive Website for Mobile UI.",
+                        "Deploy with Vercel."
                     ],
                     "link":""
                 }
@@ -91,20 +75,36 @@
             ]
         },
         {
-            "time" : "NOV 2021 - Now",
-            "skills" : "Reactjs, Material-UI, HTML5/CSS3, Javascript, Threejs",
+            "time" : "MAR 2021 - MAY 2021",
+            "skills" : "JavaFX, MySql, jUnit" ,
             "projects": [
                 {
-                    "name":"Mini Project Curriculum Vitae",
-                    "description": "The topic is Curriculum Vitae ",
-                    "git" : "https://github.com/phamtruonghoaithanh0210/cv",
-                    "responsibilities": [
-                        "I tried using Material to make UI.",
-                        "I first tried loading 3D models using react-three-fiber library.",
-                        "Responsive Website for Mobile UI.",
-                        "Deploy with Vercel."
+                    "name":"Mini project 'Software Testing'",
+                    "description": "The topic is Manage mobile phone sales",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/KiemThuProject",
+                    "responsibilities":[
+                        "I did the receipt function and receipt details function and wrote unit tests for the function.",
+                        "My team has four menbers."
                     ],
                     "link":""
+                }
+            ]
+        },
+        {
+            "time" : "OCT 2020 - DEC 2020",
+            "skills" : "Flask Framework, MySql, HTML5/CSS3.",
+            "projects": [
+                {
+                    "name":"Mini project 'Softwave Technology'",
+                    "description": "The topic is Book Management website. About user interface and admin interface.",
+                    "git" : "https://github.com/phamtruonghoaithanh0210/CongNghePhanMem",
+                    "responsibilities":[
+                        "I was the core deverloper of backend.",
+                        "My team has two menbers, We work according to the Scrum model.",
+                        "First time I tried 'Code-First'."
+                    ],
+                    "link":""
+                    
                 }
             ]
         }
